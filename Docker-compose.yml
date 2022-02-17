@@ -12,8 +12,7 @@ services:
        MYSQL_DATABASE: database_test
        MYSQL_USER: test
        MYSQL_PASSWORD: test@123
-     network:
-       - nets
+     
    web:
      depends_on:
        - mariadb
@@ -21,8 +20,7 @@ services:
        context: .
      ports:
        - "8000:80"
-     networks:
-       - nets
+
 volumes:
  database_data:
  networks:
