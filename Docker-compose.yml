@@ -17,13 +17,13 @@ services:
    web:
      depends_on:
        - mariadb
-      build:
+     build:
        context: .
      ports:
        - "8000:80"
      networks:
        - nets
 volumes:
-    database_data:
+ database_data:
  networks:
      nets:
